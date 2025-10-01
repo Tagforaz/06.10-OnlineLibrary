@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "OnlineLibrary.Application/1.0.0": {
+        "dependencies": {
+          "OnlineLibrary.Domain": "1.0.0"
+        },
+        "runtime": {
+          "OnlineLibrary.Application.dll": {}
+        }
+      },
+      "OnlineLibrary.Domain/1.0.0": {
+        "runtime": {
+          "OnlineLibrary.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "OnlineLibrary.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "OnlineLibrary.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,0 +1,15 @@
+C:\Users\Tagforaz\Desktop\Pb306\OnlineLibrary\Core\OnlineLibrary.Application\bin\Debug\net8.0\OnlineLibrary.Application.deps.json
+C:\Users\Tagforaz\Desktop\Pb306\OnlineLibrary\Core\OnlineLibrary.Application\bin\Debug\net8.0\OnlineLibrary.Application.dll
+C:\Users\Tagforaz\Desktop\Pb306\OnlineLibrary\Core\OnlineLibrary.Application\bin\Debug\net8.0\OnlineLibrary.Application.pdb
+C:\Users\Tagforaz\Desktop\Pb306\OnlineLibrary\Core\OnlineLibrary.Application\bin\Debug\net8.0\OnlineLibrary.Domain.dll
+C:\Users\Tagforaz\Desktop\Pb306\OnlineLibrary\Core\OnlineLibrary.Application\bin\Debug\net8.0\OnlineLibrary.Domain.pdb
+C:\Users\Tagforaz\Desktop\Pb306\OnlineLibrary\Core\OnlineLibrary.Application\obj\Debug\net8.0\OnlineLibrary.Application.csproj.AssemblyReference.cache
+C:\Users\Tagforaz\Desktop\Pb306\OnlineLibrary\Core\OnlineLibrary.Application\obj\Debug\net8.0\OnlineLibrary.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Tagforaz\Desktop\Pb306\OnlineLibrary\Core\OnlineLibrary.Application\obj\Debug\net8.0\OnlineLibrary.Application.AssemblyInfoInputs.cache
+C:\Users\Tagforaz\Desktop\Pb306\OnlineLibrary\Core\OnlineLibrary.Application\obj\Debug\net8.0\OnlineLibrary.Application.AssemblyInfo.cs
+C:\Users\Tagforaz\Desktop\Pb306\OnlineLibrary\Core\OnlineLibrary.Application\obj\Debug\net8.0\OnlineLibrary.Application.csproj.CoreCompileInputs.cache
+C:\Users\Tagforaz\Desktop\Pb306\OnlineLibrary\Core\OnlineLibrary.Application\obj\Debug\net8.0\OnlineLi.38BF928F.Up2Date
+C:\Users\Tagforaz\Desktop\Pb306\OnlineLibrary\Core\OnlineLibrary.Application\obj\Debug\net8.0\OnlineLibrary.Application.dll
+C:\Users\Tagforaz\Desktop\Pb306\OnlineLibrary\Core\OnlineLibrary.Application\obj\Debug\net8.0\refint\OnlineLibrary.Application.dll
+C:\Users\Tagforaz\Desktop\Pb306\OnlineLibrary\Core\OnlineLibrary.Application\obj\Debug\net8.0\OnlineLibrary.Application.pdb
+C:\Users\Tagforaz\Desktop\Pb306\OnlineLibrary\Core\OnlineLibrary.Application\obj\Debug\net8.0\ref\OnlineLibrary.Application.dll
