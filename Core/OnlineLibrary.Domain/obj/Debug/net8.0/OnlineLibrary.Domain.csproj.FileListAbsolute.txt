@@ -9,3 +9,4 @@ C:\Users\Tagforaz\Desktop\Pb306\OnlineLibrary\Core\OnlineLibrary.Domain\obj\Debu
 C:\Users\Tagforaz\Desktop\Pb306\OnlineLibrary\Core\OnlineLibrary.Domain\obj\Debug\net8.0\refint\OnlineLibrary.Domain.dll
 C:\Users\Tagforaz\Desktop\Pb306\OnlineLibrary\Core\OnlineLibrary.Domain\obj\Debug\net8.0\OnlineLibrary.Domain.pdb
 C:\Users\Tagforaz\Desktop\Pb306\OnlineLibrary\Core\OnlineLibrary.Domain\obj\Debug\net8.0\ref\OnlineLibrary.Domain.dll
+C:\Users\Tagforaz\Desktop\Pb306\OnlineLibrary\Core\OnlineLibrary.Domain\obj\Debug\net8.0\OnlineLibrary.Domain.sourcelink.json

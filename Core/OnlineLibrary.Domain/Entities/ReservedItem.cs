@@ -9,7 +9,7 @@ namespace OnlineLibrary.Domain.Entities
 {
     public class ReservedItem:BaseEntity
     {
-        public int FinCode {  get; set; }
+        public string FinCode {  get; set; }
         public DateTime StartDate {  get; set; }
         public DateTime EndDate { get; set; }
         public int BookId { get; set; }

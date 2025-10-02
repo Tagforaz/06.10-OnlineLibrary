@@ -84,8 +84,9 @@ namespace OnlineLibrary.Persistence.Contexts.Migrations
                     b.Property<DateTime>("EndDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("FinCode")
-                        .HasColumnType("int");
+                    b.Property<string>("FinCode")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("StartDate")
                         .HasColumnType("datetime2");

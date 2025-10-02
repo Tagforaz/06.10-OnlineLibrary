@@ -12,7 +12,7 @@ namespace OnlineLibrary.Application.Interfaces.Repositories
         public void Create(Author author);
         public List<Author> GetAll();
         public void Delete(int id);
-        public Author GetById(int id);  
+        public Author? GetById(int id);  
 
     }
 }

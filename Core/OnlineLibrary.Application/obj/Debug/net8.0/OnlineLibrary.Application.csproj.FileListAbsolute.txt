@@ -13,3 +13,4 @@ C:\Users\Tagforaz\Desktop\Pb306\OnlineLibrary\Core\OnlineLibrary.Application\obj
 C:\Users\Tagforaz\Desktop\Pb306\OnlineLibrary\Core\OnlineLibrary.Application\obj\Debug\net8.0\refint\OnlineLibrary.Application.dll
 C:\Users\Tagforaz\Desktop\Pb306\OnlineLibrary\Core\OnlineLibrary.Application\obj\Debug\net8.0\OnlineLibrary.Application.pdb
 C:\Users\Tagforaz\Desktop\Pb306\OnlineLibrary\Core\OnlineLibrary.Application\obj\Debug\net8.0\ref\OnlineLibrary.Application.dll
+C:\Users\Tagforaz\Desktop\Pb306\OnlineLibrary\Core\OnlineLibrary.Application\obj\Debug\net8.0\OnlineLibrary.Application.sourcelink.json

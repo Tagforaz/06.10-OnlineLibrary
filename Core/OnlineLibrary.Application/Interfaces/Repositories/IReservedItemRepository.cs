@@ -12,7 +12,8 @@ namespace OnlineLibrary.Application.Interfaces.Repositories
         public void Create(ReservedItem item);
         public void Delete(int id);
         public List<ReservedItem> GetAll();
-        public ReservedItem GetById(int id);
+        public ReservedItem? GetById(int id);
+        public void Update(ReservedItem item);
 
     }
 }

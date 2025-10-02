@@ -43,5 +43,11 @@ namespace OnlineLibrary.Persistence.Implementations.Repositories
         {
             return _context.ReservedItems.Include(r => r.Book).FirstOrDefault(r => r.Id == id);
         }
+
+        public void Update(ReservedItem item)
+        {
+            _context.ReservedItems.Update(item);
+            _context.SaveChanges();
+        }
     }
 }

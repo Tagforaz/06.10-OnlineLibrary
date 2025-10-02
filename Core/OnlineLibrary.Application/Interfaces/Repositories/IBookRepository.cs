@@ -12,6 +12,6 @@ namespace OnlineLibrary.Application.Interfaces.Repositories
      public void Create(Book book);
      public List<Book>  GetAll();
      public void Delete(int id);
-     public Book GetById(int id);
+     public Book? GetById(int id);
     }
 }

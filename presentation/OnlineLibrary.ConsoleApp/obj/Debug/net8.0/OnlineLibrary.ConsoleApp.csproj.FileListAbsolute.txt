@@ -135,3 +135,4 @@ C:\Users\Tagforaz\Desktop\Pb306\OnlineLibrary\presentation\OnlineLibrary.Console
 C:\Users\Tagforaz\Desktop\Pb306\OnlineLibrary\presentation\OnlineLibrary.ConsoleApp\obj\Debug\net8.0\OnlineLibrary.ConsoleApp.pdb
 C:\Users\Tagforaz\Desktop\Pb306\OnlineLibrary\presentation\OnlineLibrary.ConsoleApp\obj\Debug\net8.0\OnlineLibrary.ConsoleApp.genruntimeconfig.cache
 C:\Users\Tagforaz\Desktop\Pb306\OnlineLibrary\presentation\OnlineLibrary.ConsoleApp\obj\Debug\net8.0\ref\OnlineLibrary.ConsoleApp.dll
+C:\Users\Tagforaz\Desktop\Pb306\OnlineLibrary\presentation\OnlineLibrary.ConsoleApp\obj\Debug\net8.0\OnlineLibrary.ConsoleApp.sourcelink.json

@@ -17,3 +17,4 @@ C:\Users\Tagforaz\Desktop\Pb306\OnlineLibrary\Infrastructure\OnlineLibrary.Persi
 C:\Users\Tagforaz\Desktop\Pb306\OnlineLibrary\Infrastructure\OnlineLibrary.Persistence\obj\Debug\net8.0\OnlineLibrary.Persistence.pdb
 C:\Users\Tagforaz\Desktop\Pb306\OnlineLibrary\Infrastructure\OnlineLibrary.Persistence\obj\Debug\net8.0\OnlineLibrary.Persistence.genruntimeconfig.cache
 C:\Users\Tagforaz\Desktop\Pb306\OnlineLibrary\Infrastructure\OnlineLibrary.Persistence\obj\Debug\net8.0\ref\OnlineLibrary.Persistence.dll
+C:\Users\Tagforaz\Desktop\Pb306\OnlineLibrary\Infrastructure\OnlineLibrary.Persistence\obj\Debug\net8.0\OnlineLibrary.Persistence.sourcelink.json

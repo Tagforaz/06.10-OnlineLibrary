@@ -1,10 +1,13 @@
-﻿namespace OnlineLibrary.ConsoleApp
+﻿using OnlineLibrary.ConsoleApp.Helpers;
+
+namespace OnlineLibrary.ConsoleApp
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            ManagementApplication app = new ManagementApplication();
+            app.Run();
         }
     }
 }
