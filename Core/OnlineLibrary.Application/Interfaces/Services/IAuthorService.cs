@@ -10,7 +10,7 @@ namespace OnlineLibrary.Application.Interfaces.Services
 {
     public interface IAuthorService
     {
-        void Create (string name,string? surname,Gender gender);
+        void Create (Author author);
         void Delete(int id);
         List<Author> GetAll();
         List<Book> GetBooksByAuthor(int authorId);

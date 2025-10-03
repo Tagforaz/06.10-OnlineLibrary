@@ -5,7 +5,6 @@ using OnlineLibrary.Domain.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.InteropServices.ObjectiveC;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -18,23 +17,23 @@ namespace OnlineLibrary.Persistence.Implementations.Services
         {
             _authors = authors;
         }
-        public void Create(string name,string? surname,Gender gender)
+        public void Create(Author author)
         {
-            if (string.IsNullOrEmpty(name)) throw new ArgumentNullException("Author name is used");
-            var author = new Author
+            if (author is null) throw new ArgumentNullException(nameof(author), "Author's name wasn't be null");
+            if (string.IsNullOrWhiteSpace(author.Name)) throw new ArgumentException("Author name was used",nameof(author.Name));
+            author.Name = author.Name.Trim();
+            if (!string.IsNullOrWhiteSpace(author.Surname))
             {
-                Name = name.Trim(),
-                Surname = string.IsNullOrWhiteSpace(surname) ? null: surname.Trim(),
-                Gender = gender
-            };
+                author.Surname = author.Surname.Trim();
+            }
             _authors.Create(author);
         }
 
         public void Delete(int id)
         {
-            var author  = _authors.GetById(id);
-            if (author == null) throw new InvalidOperationException("Author dont find");
-            if (author.Books.FirstOrDefault()!=null) throw new InvalidOperationException("Author have books.Delete impossible");
+            var author = _authors.GetById(id);
+            if (author is null) throw new InvalidOperationException("Author not found.");
+            if (author.Books != null && author.Books.Any()) throw new InvalidOperationException("Author's have books.You hav not deleted this Author");
             _authors.Delete(id);
         }
 

@@ -14,35 +14,30 @@ namespace OnlineLibrary.Persistence.Implementations.Services
     {
         private readonly IBookRepository _books;
         private readonly IAuthorRepository _authors;
-        private readonly IReservedItemRepository _reservedItem;
-        public BookService(IBookRepository books, IAuthorRepository authors, IReservedItemRepository reservedItem)
+        public BookService(IBookRepository books, IAuthorRepository authors)
         {
             _books = books;
             _authors = authors;
-            _reservedItem = reservedItem;
         }
 
-        public void Create(string name, int pageCount, int authorId)
+        public void Create(Book book)
         {
-            if (string.IsNullOrEmpty(name)) throw new ArgumentNullException("Book name is also used");
-            var author = _authors.GetById(authorId);
-            if (author == null) throw new ArgumentNullException("Author not founded");
-            var book = new Book
-            {
-                Name = name.Trim(),
-                PageCount = pageCount,
-                AuthorId = authorId,
-                Author = author
-            };
+            if (book is null) throw new ArgumentNullException(nameof(book), "Book's name wasn't be null");
+            if (string.IsNullOrWhiteSpace(book.Name)) throw new ArgumentException("Book's name was used",nameof(book.Name));
+            if (book.PageCount <= 0) throw new ArgumentException("Page's count cant be zero or negative", nameof(book.PageCount));
+            var author =_authors.GetById(book.AuthorId);
+            if (author is null) throw new InvalidOperationException("Author not founded");
+            book.Name = book.Name.Trim();
+            book.Author= author;
             _books.Create(book);
         }
 
         public void Delete(int id)
         {
           var book = _books.GetById(id);
-            if(book == null) return;
+            if(book is null) return;
             var hasActive = book.ReservedItems.Any(r => r.Status == Status.Confirmed || r.Status == Status.Started);
-            if (hasActive) throw new ArgumentException("Book is reserved");
+            if (hasActive) throw new InvalidOperationException("Book is reserved");
             _books.Delete(id);
         }
 
@@ -55,7 +50,7 @@ namespace OnlineLibrary.Persistence.Implementations.Services
         public Book? GetById(int id, bool withDate = false)
         {
             var book = _books.GetById(id);
-            if(book == null) return null;
+            if(book is null) return null;
             if (!withDate)
             {
                 book.ReservedItems = new List<ReservedItem>() ;

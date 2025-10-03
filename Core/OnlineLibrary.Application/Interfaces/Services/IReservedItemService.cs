@@ -10,7 +10,7 @@ namespace OnlineLibrary.Application.Interfaces.Services
 {
     public interface IReservedItemService
     {
-        void Create (int bookId, string finCode, DateTime startDate, DateTime endDate);
+        void Create (ReservedItem item);
         void Delete(int id);
         List<ReservedItem> GetAll(Status? status = null);   
         void Update(int reservationId, Status newStatus);

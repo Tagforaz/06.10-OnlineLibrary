@@ -9,7 +9,7 @@ namespace OnlineLibrary.Application.Interfaces.Services
 {
     public interface IBookService
     {
-        void Create(string name, int pageCount, int authorId);
+        void Create(Book book);
         void Delete(int id);
         Book? GetById(int id, bool withDate = false);
         List<Book> GetAll();

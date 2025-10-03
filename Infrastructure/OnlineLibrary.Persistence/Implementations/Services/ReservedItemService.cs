@@ -19,29 +19,20 @@ namespace OnlineLibrary.Persistence.Implementations.Services
             _reservations = reservations;
             _books = books;
         }
-        public void Create(int bookId, string finCode, DateTime startDate, DateTime endDate)
+        public void Create(ReservedItem item)
         {
-            if (string.IsNullOrEmpty(finCode)) throw new ArgumentException("Fincode  wrong");
-            finCode = finCode.Trim().ToUpperInvariant();
-            if (endDate <= startDate) throw new ArgumentException("End date must higher than start date");
-            var book = _books.GetById(bookId);
-            if (book == null) throw new ArgumentException("Book is not found");
-            int activeForUser = _reservations.GetAll().Count(r => string.Equals(r.FinCode, finCode, StringComparison.OrdinalIgnoreCase)
-            && (r.Status == Status.Confirmed || r.Status == Status.Started));
-            if (activeForUser >= 3)  throw new InvalidOperationException("You reserv max 3 book!!!.");
-            bool hasActive = _reservations.GetAll().Any(r =>r.BookId == bookId &&(r.Status == Status.Confirmed || r.Status == Status.Started) && startDate < r.EndDate && endDate > r.StartDate);
-            if (hasActive) throw new InvalidOperationException("Book also reserved for this date");
-            var item = new ReservedItem
-            {
-                BookId = bookId,
-                Book = book,
-                StartDate = startDate,
-                EndDate = endDate,
-                FinCode = finCode,
-                Status = Status.Confirmed
-            };
+            if (item is null) throw new ArgumentNullException(nameof(item), "Reservation wasn't be null");
+            if (string.IsNullOrWhiteSpace(item.FinCode)) throw new ArgumentException("FinCode wasnt't be null", nameof(item.FinCode));
+            item.FinCode = item.FinCode.Trim();
+            if (item.EndDate <= item.StartDate) throw new ArgumentException("End date must be greater than Start date");
+            var book = _books.GetById(item.BookId);
+            if (book is null) throw new InvalidOperationException("Book not found");
+            int activeReserv=_reservations.GetAll().Count(r=>string.Equals(r.FinCode,item.FinCode,StringComparison.OrdinalIgnoreCase)&&(r.Status==Status.Confirmed||r.Status==Status.Started));
+            if (activeReserv >= 3) throw new InvalidOperationException("User mus be reserv max 3 book");
+            bool hasReserv = _reservations.GetAll().Any(r=>r.BookId==item.BookId&&(r.Status==Status.Confirmed||r.Status==Status.Started)&&item.StartDate<r.EndDate&&item.EndDate>r.StartDate);
+            if (hasReserv) throw new InvalidOperationException("Book is reserved for this dates");
+            item.Status=Status.Confirmed;
             _reservations.Create(item);
-
         }
 
         public void Delete(int id)
@@ -55,14 +46,18 @@ namespace OnlineLibrary.Persistence.Implementations.Services
         public List<ReservedItem> GetAll(Status? status = null)
         {
              var rb = _reservations.GetAll().AsQueryable();
-            if (status.HasValue) rb = rb.Where(r => r.Status == status.Value);
+            if (status.HasValue)
+            {
+                rb = rb.Where(r => r.Status == status.Value);
+            }
             return rb.OrderByDescending(r => r.StartDate).ToList();
         }
 
         public List<ReservedItem> GetByUser(string finCode)
         {
-            finCode = finCode?.Trim().ToUpperInvariant() ?? string.Empty;
-            return _reservations.GetAll().Where(r => r.FinCode.ToUpper() == finCode).OrderByDescending(r => r.StartDate).ToList();
+            var fin = finCode?.Trim() ?? string.Empty;
+
+            return _reservations.GetAll().Where(r => string.Equals(r.FinCode, fin, StringComparison.OrdinalIgnoreCase)).OrderByDescending(r => r.StartDate).ToList();
         }
 
         public void Update(int reservationId, Status newStatus)
@@ -84,7 +79,7 @@ namespace OnlineLibrary.Persistence.Implementations.Services
                 allowed = false;
             }
             if (!allowed)
-                throw new InvalidOperationException("Yolverilməz status keçidi.");
+                throw new InvalidOperationException("Invalid status");
             item.Status = newStatus;
             _reservations.Update(item);
         }

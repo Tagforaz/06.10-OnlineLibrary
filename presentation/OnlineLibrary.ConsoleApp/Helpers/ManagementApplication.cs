@@ -1,4 +1,8 @@
-﻿using OnlineLibrary.Domain.Entities;
+﻿using OnlineLibrary.Application.Interfaces.Services;
+using OnlineLibrary.Domain.Entities;
+using OnlineLibrary.Persistence.Contexts;
+using OnlineLibrary.Persistence.Implementations.Repositories;
+using OnlineLibrary.Persistence.Implementations.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +13,19 @@ namespace OnlineLibrary.ConsoleApp.Helpers
 {
     public class ManagementApplication
     {
+        private readonly IAuthorService _authorService;         
+        private readonly IBookService _bookService;
+        private readonly IReservedItemService _reservationService;
+        public ManagementApplication()
+        {
+            var db = new AppDbContext();
+            var authorRepo = new AuthorRepository(db);
+            var bookRepo = new BookRepository(db);
+            var resRepo = new ReservedItemRepository(db);
+            _authorService = new AuthorService(authorRepo);
+            _bookService = new BookService(bookRepo, authorRepo);
+            _reservationService = new ReservedItemService(resRepo, bookRepo);
+        }
         public void Run()
         {
 
