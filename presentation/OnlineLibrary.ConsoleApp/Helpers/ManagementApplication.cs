@@ -13,78 +13,91 @@ namespace OnlineLibrary.ConsoleApp.Helpers
 {
     public class ManagementApplication
     {
-        private readonly IAuthorService _authorService;         
-        private readonly IBookService _bookService;
-        private readonly IReservedItemService _reservationService;
+        private readonly ManageMetods _manage;
         public ManagementApplication()
         {
             var db = new AppDbContext();
             var authorRepo = new AuthorRepository(db);
             var bookRepo = new BookRepository(db);
             var resRepo = new ReservedItemRepository(db);
-            _authorService = new AuthorService(authorRepo);
-            _bookService = new BookService(bookRepo, authorRepo);
-            _reservationService = new ReservedItemService(resRepo, bookRepo);
+            IAuthorService authorService = new AuthorService(authorRepo);
+            IBookService bookService = new BookService(bookRepo, authorRepo);
+            IReservedItemService reserveService = new ReservedItemService(resRepo, bookRepo);
+            _manage = new ManageMetods(authorService, bookService, reserveService);
         }
         public void Run()
         {
 
-            int num = 0;
-            string str = null;
-            bool result = false;
-
-
-            while (!(num == 0 && result))
+            var actions = new Dictionary<int, Action>
             {
-                Console.WriteLine("1.Create Book\n2.Delete Book\n3.Get Book By Id\n4.Show All Books\n5.Create Author\n6.Show All Authors" +
-                    "              \n7.Show Author's Books\n8.Reserve Book\n9.Reservation List\n10.Change Reservation List\n11.User's Reservations List\n0.Exit");
-                str = Console.ReadLine();
+                [1] = _manage.CreateBook,
+                [2] = _manage.DeleteBook,
+                [3] = _manage.GetBookById,
+                [4] = _manage.ShowAllBooks,
+                [5] = _manage.CreateAuthor,
+                [6] = _manage.ShowAllAuthors,
+                [7] = _manage.ShowAuthorsBooks,
+                [8] = _manage.ReserveBook,
+                [9] = _manage.ReservationList,
+                [10] = _manage.ChangeReservationStatus,
+                [11] = _manage.UsersReservationsList
+            };
+
+            while (true)
+            {
                 Console.Clear();
-                result = int.TryParse(str, out num);
-                switch (num)
+                Console.WriteLine("Online Library");
+                Console.WriteLine("====================================");
+                Console.WriteLine("1) Create Book");
+                Console.WriteLine("2) Delete Book");
+                Console.WriteLine("3) Get Book by Id");
+                Console.WriteLine("4) Show All Books");
+                Console.WriteLine("5) Create Author");
+                Console.WriteLine("6) Show All Authors");
+                Console.WriteLine("7) Author's Books");
+                Console.WriteLine("8) Reserve Book");
+                Console.WriteLine("9) Reservation List");
+                Console.WriteLine("10) Change Reservation Status");
+                Console.WriteLine("11) User's Reservations");
+                Console.WriteLine("0) Exit");
+                Console.Write("Select: ");
+
+                if (!int.TryParse(Console.ReadLine(), out var pick))
                 {
-                    case 1:
-                        Console.WriteLine("Create Book");
-                        break;
-                    case 2:
-                        Console.WriteLine("Delete Book");
-                        break;
-                    case 3:
-                        Console.WriteLine("Get Book By Id");
-                        break;
-                    case 4:
-                        Console.WriteLine("Show All Books");
-                        break;
-                    case 5:
-                        Console.WriteLine("Create Author");
-                        break;
-                    case 6:
-                        Console.WriteLine("Show All Authors");
-                        break;
-                    case 7:
-                        Console.WriteLine("Show Author's Books");
-                        break;
-                    case 8:
-                        Console.WriteLine("Reserve Book");
-                        break;
-                    case 9:
-                        Console.WriteLine("Reservation List");
-                        break;
-                    case 10:
-                        Console.WriteLine("Change Reservation List");
-                        break;
-                    case 11:
-                        Console.WriteLine("User's Reservations List");
-                        break;
-                    case 0:
-                        Console.WriteLine("Program ended");
-                        break;
-                    default:
-                        Console.WriteLine("Wrong Input. Please Try Again");
-                        break;
+                    Console.WriteLine("Please enter a number.");
+                    Console.Write("Press ENTER to continue..."); Console.ReadLine();
+                    continue;
                 }
+
+                if (pick == 0)
+                {
+                    Console.WriteLine("Program ended.");
+                    return;
+                }
+
+                try
+                {
+                    if (actions.TryGetValue(pick, out var act))
+                    {
+                        act();
+                    }
+                    else
+                    {
+                        Console.WriteLine("Wrong selection. Try again.");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.Clear();
+                    Console.WriteLine($"Error: {ex.Message}");
+                }
+
+                Console.WriteLine();
+                Console.Write("Press ENTER to continue...");
+                Console.ReadLine();
             }
         }
     }
-}
+    }
+
  

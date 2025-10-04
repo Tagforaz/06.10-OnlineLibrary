@@ -35,7 +35,7 @@ namespace OnlineLibrary.Persistence.Implementations.Services
         public void Delete(int id)
         {
           var book = _books.GetById(id);
-            if(book is null) return;
+            if(book is null) throw new InvalidOperationException("Book not found.");
             var hasActive = book.ReservedItems.Any(r => r.Status == Status.Confirmed || r.Status == Status.Started);
             if (hasActive) throw new InvalidOperationException("Book is reserved");
             _books.Delete(id);
