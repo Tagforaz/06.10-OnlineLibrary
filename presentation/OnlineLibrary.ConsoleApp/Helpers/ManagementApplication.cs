@@ -54,7 +54,7 @@ namespace OnlineLibrary.ConsoleApp.Helpers
                 Console.WriteLine("4) Show All Books");
                 Console.WriteLine("5) Create Author");
                 Console.WriteLine("6) Show All Authors");
-                Console.WriteLine("7) Author's Books");
+                Console.WriteLine("7) Show Author's Books");
                 Console.WriteLine("8) Reserve Book");
                 Console.WriteLine("9) Reservation List");
                 Console.WriteLine("10) Change Reservation Status");
