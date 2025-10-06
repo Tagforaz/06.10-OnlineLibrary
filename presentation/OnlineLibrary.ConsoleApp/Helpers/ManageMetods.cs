@@ -349,6 +349,67 @@ namespace OnlineLibrary.ConsoleApp.Helpers
                 RetroUi.RightEnd();
             }
         }
+        public void DeleteAuthor()
+        {
+            while (true)
+            {
+                RetroUi.RightBegin("Delete Author");
+                var authors = _authors.GetAll().OrderBy(a => a.Name).ToList();
+                if (authors.Count == 0)
+                {
+                    RetroUi.RightWarn("No authors.");
+                    RetroUi.RightEnd();
+                    return;
+                }
+                RetroUi.RightWriteLine("-- Authors --");
+                foreach (var a in authors)
+                {
+                    var full = string.IsNullOrWhiteSpace(a.Surname) ? a.Name : $"{a.Name} {a.Surname}";
+                    RetroUi.RightWriteLine($"[{a.Id}] {full} | Books: {a.Books?.Count ?? 0}");
+                }
+                RetroUi.RightWriteLine("");
+                var input = (RetroUi.RightAsk("Author Id (menu): ") ?? "").Trim();
+                if (input.Equals("menu", StringComparison.OrdinalIgnoreCase))
+                {
+                    RetroUi.RightEnd();
+                    return;
+                }
+                if (!int.TryParse(input, out var id))
+                {
+                    RetroUi.RightError("Input a number.");
+                    RetroUi.RightEnd();
+                    continue;
+                }
+                var author = _authors.GetByID(id);
+                if (author is null)
+                {
+                    RetroUi.RightError("Author not found.");
+                    RetroUi.RightEnd();
+                    continue;
+                }
+                if (author.Books != null && author.Books.Any())
+                {
+                    RetroUi.RightError("This author has books and cannot be deleted.");
+                    foreach (var b in author.Books.OrderBy(b => b.Name))
+                        RetroUi.RightWriteLine($" - {b.Name}");
+                    RetroUi.RightEnd();
+                    return;
+                }
+
+                try
+                {
+                    _authors.Delete(id);
+                    RetroUi.RightSuccess("Author deleted.");
+                }
+                catch (Exception ex)
+                {
+                    RetroUi.RightError($"Error: {ex.Message}");
+                }
+
+                RetroUi.RightEnd();
+                return;
+            }
+        }
         public void ShowAllAuthors()
         {
             RetroUi.RightBegin("All Authors");
@@ -361,7 +422,7 @@ namespace OnlineLibrary.ConsoleApp.Helpers
             foreach (var a in list.OrderBy(x => x.Name))
             {
                 var full = string.IsNullOrWhiteSpace(a.Surname) ? a.Name : $"{a.Name} {a.Surname}";
-                RetroUi.RightWriteLine($"ID:[{a.Id}] {full} | {a.Gender} | Books: {a.Books?.Count ?? 0}");
+                RetroUi.RightWriteLine($"ID:[{a.Id}] Name:{full} | Gender:{a.Gender} | Books: {a.Books?.Count ?? 0}");
             }
             RetroUi.RightEnd();
         }
@@ -589,6 +650,7 @@ namespace OnlineLibrary.ConsoleApp.Helpers
         {
             int step = 0;
             int selectedId = 0;
+            Status currentStatus = default;
 
             while (true)
             {
@@ -615,12 +677,20 @@ namespace OnlineLibrary.ConsoleApp.Helpers
                     if (s.Equals("menu", StringComparison.OrdinalIgnoreCase)) { RetroUi.RightEnd(); return; }
                     if (s.Equals("back", StringComparison.OrdinalIgnoreCase)) { RetroUi.RightEnd(); return; }
 
-                    if (!int.TryParse(s, out selectedId) || selectedId <= 0 || !list.Any(r => r.Id == selectedId))
+                    if (!int.TryParse(s, out selectedId) || selectedId <= 0)
                     {
-                        RetroUi.RightError("Reservation not found or invalid Id.");
+                        RetroUi.RightError("Invalid Id.");
                         RetroUi.RightEnd(); continue;
                     }
 
+                    var selected = list.FirstOrDefault(r => r.Id == selectedId);
+                    if (selected is null)
+                    {
+                        RetroUi.RightError("Reservation not found.");
+                        RetroUi.RightEnd(); continue;
+                    }
+
+                    currentStatus = selected.Status; 
                     step = 1;
                     RetroUi.RightEnd();
                     continue;
@@ -629,6 +699,7 @@ namespace OnlineLibrary.ConsoleApp.Helpers
                 {
                     RetroUi.RightBegin("Change Reservation Status");
                     RetroUi.RightWriteLine($"Selected Reservation Id: {selectedId}");
+                    RetroUi.RightWriteLine($"Current Status         : {currentStatus}");
                     RetroUi.RightWriteLine("");
 
                     var ns = (RetroUi.RightAsk("New Status (1-Confirmed,2-Started,3-Completed,4-Canceled) (menu/back): ") ?? "").Trim();
@@ -642,6 +713,11 @@ namespace OnlineLibrary.ConsoleApp.Helpers
                     {
                         RetroUi.RightError("Invalid value.");
                         RetroUi.RightEnd(); continue;
+                    }
+                    if (newStatus == currentStatus)
+                    {
+                        RetroUi.RightError("No change: reservation is already in the selected status.");
+                        RetroUi.RightEnd(); continue; 
                     }
 
                     try

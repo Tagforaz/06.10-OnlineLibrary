@@ -34,12 +34,13 @@ namespace OnlineLibrary.ConsoleApp.Helpers
                 [3] = ("Get Book by Id", () => RunRightPane("Get Book by Id", _manage.GetBookById)),
                 [4] = ("Show All Books", () => RunRightPane("All Books", _manage.ShowAllBooks)),
                 [5] = ("Create Author", () => RunRightPane("Create Author", _manage.CreateAuthor)),
-                [6] = ("Show All Authors", () => RunRightPane("All Authors", _manage.ShowAllAuthors)),
-                [7] = ("Author's Books", () => RunRightPane("Author's Books", _manage.ShowAuthorsBooks)),
-                [8] = ("Reserve Book", () => RunRightPane("Reserve Book", _manage.ReserveBook)),
-                [9] = ("Reservation List", () => RunRightPane("Reservation List", _manage.ReservationList)),
-                [10] = ("Change Reservation", () => RunRightPane("Change Reservation Status", _manage.ChangeReservationStatus)),
-                [11] = ("User's Reservations", () => RunRightPane("User's Reservations", _manage.UsersReservationsList)),
+                [6] = ("Delete Author", () => RunRightPane("Delete Author", _manage.DeleteAuthor)),
+                [7] = ("Show All Authors", () => RunRightPane("All Authors", _manage.ShowAllAuthors)),
+                [8] = ("Author's Books", () => RunRightPane("Author's Books", _manage.ShowAuthorsBooks)),
+                [9] = ("Reserve Book", () => RunRightPane("Reserve Book", _manage.ReserveBook)),
+                [10] = ("Show Reservation Lists", () => RunRightPane("Show Reservation Lists", _manage.ReservationList)),
+                [11] = ("Change Reservation Status", () => RunRightPane("Change Reservation Status", _manage.ChangeReservationStatus)),
+                [12] = ("User's Reservations", () => RunRightPane("User's Reservations", _manage.UsersReservationsList)),
             };
 
             RetroUi.Intro("Online Library");
@@ -49,20 +50,24 @@ namespace OnlineLibrary.ConsoleApp.Helpers
                 RetroUi.ComputeLayout();
                 RetroUi.Frame("Online Library");
 
-                var menuItems = new List<string>();
-                foreach (var kv in actions)
-                    menuItems.Add($"{kv.Key,2}. {kv.Value.Label}");
+                var menuItems = actions
+                    .OrderBy(kv => kv.Key)
+                    .Select(kv => $"{kv.Key,2}. {kv.Value.Label}")
+                    .ToList();
+
                 RetroUi.LeftMenu("Menu", menuItems);
 
                 RetroUi.RightBegin("Welcome");
-                RetroUi.RightWriteLines(new[]{
-            "Use numbers [1-11] to navigate.",
-            "Press 0 to Exit."
-        });
-                RetroUi.RightEnd("Enter your choice [0-11] and press ENTER...");
+                RetroUi.RightWriteLines(new[]
+                {
+                    "Use numbers [1-12] to navigate.",
+                    "Press 0 to Exit."
+                });
+                RetroUi.RightEnd("Enter your choice [0-12] and press ENTER...");
 
-                RetroUi.Footer("Enter your choice [0-11]: ");
+                RetroUi.Footer("Enter your choice [0-12]: ");
                 Console.SetCursorPosition(RetroUi.L.Bottom.x1 + 25, RetroUi.L.Bottom.y1 + 1);
+
                 var raw = (Console.ReadLine() ?? "").Trim();
                 if (!int.TryParse(raw, out var pick))
                 {
@@ -70,7 +75,13 @@ namespace OnlineLibrary.ConsoleApp.Helpers
                     System.Threading.Thread.Sleep(900);
                     continue;
                 }
-                if (pick == 0) { RetroUi.Info("Exiting..."); System.Threading.Thread.Sleep(500); Console.Clear(); return; }
+                if (pick == 0)
+                {
+                    RetroUi.Info("Exiting...");
+                    System.Threading.Thread.Sleep(500);
+                    Console.Clear();
+                    return;
+                }
 
                 if (!actions.TryGetValue(pick, out var item))
                 {
@@ -90,15 +101,11 @@ namespace OnlineLibrary.ConsoleApp.Helpers
 
         private static void RunRightPane(string title, Action action)
         {
+            
             RetroUi.RightBegin(title);
-
             action.Invoke();
-
             RetroUi.RightEnd();
             RetroUi.RefreshFrameHeader("Online Library");
         }
     }
 }
-
-
-
