@@ -27,77 +27,78 @@ namespace OnlineLibrary.ConsoleApp.Helpers
         }
         public void Run()
         {
-
-            var actions = new Dictionary<int, Action>
+            var actions = new Dictionary<int, (string Label, Action Act)>
             {
-                [1] = _manage.CreateBook,
-                [2] = _manage.DeleteBook,
-                [3] = _manage.GetBookById,
-                [4] = _manage.ShowAllBooks,
-                [5] = _manage.CreateAuthor,
-                [6] = _manage.ShowAllAuthors,
-                [7] = _manage.ShowAuthorsBooks,
-                [8] = _manage.ReserveBook,
-                [9] = _manage.ReservationList,
-                [10] = _manage.ChangeReservationStatus,
-                [11] = _manage.UsersReservationsList
+                [1] = ("Create Book", () => RunRightPane("Create Book", _manage.CreateBook)),
+                [2] = ("Delete Book", () => RunRightPane("Delete Book", _manage.DeleteBook)),
+                [3] = ("Get Book by Id", () => RunRightPane("Get Book by Id", _manage.GetBookById)),
+                [4] = ("Show All Books", () => RunRightPane("All Books", _manage.ShowAllBooks)),
+                [5] = ("Create Author", () => RunRightPane("Create Author", _manage.CreateAuthor)),
+                [6] = ("Show All Authors", () => RunRightPane("All Authors", _manage.ShowAllAuthors)),
+                [7] = ("Author's Books", () => RunRightPane("Author's Books", _manage.ShowAuthorsBooks)),
+                [8] = ("Reserve Book", () => RunRightPane("Reserve Book", _manage.ReserveBook)),
+                [9] = ("Reservation List", () => RunRightPane("Reservation List", _manage.ReservationList)),
+                [10] = ("Change Reservation", () => RunRightPane("Change Reservation Status", _manage.ChangeReservationStatus)),
+                [11] = ("User's Reservations", () => RunRightPane("User's Reservations", _manage.UsersReservationsList)),
             };
+
+            RetroUi.Intro("Online Library");
 
             while (true)
             {
-                Console.Clear();
-                Console.WriteLine("Online Library");
-                Console.WriteLine("====================================");
-                Console.WriteLine("1) Create Book");
-                Console.WriteLine("2) Delete Book");
-                Console.WriteLine("3) Get Book by Id");
-                Console.WriteLine("4) Show All Books");
-                Console.WriteLine("5) Create Author");
-                Console.WriteLine("6) Show All Authors");
-                Console.WriteLine("7) Show Author's Books");
-                Console.WriteLine("8) Reserve Book");
-                Console.WriteLine("9) Reservation List");
-                Console.WriteLine("10) Change Reservation Status");
-                Console.WriteLine("11) User's Reservations");
-                Console.WriteLine("0) Exit");
-                Console.Write("Select: ");
+                RetroUi.ComputeLayout();
+                RetroUi.Frame("Online Library");
 
-                if (!int.TryParse(Console.ReadLine(), out var pick))
+                var menuItems = new List<string>();
+                foreach (var kv in actions)
+                    menuItems.Add($"{kv.Key,2}. {kv.Value.Label}");
+                RetroUi.LeftMenu("Menu", menuItems);
+
+                RetroUi.RightBegin("Welcome");
+                RetroUi.RightWriteLines(new[]{
+            "Use numbers [1-11] to navigate.",
+            "Press 0 to Exit."
+        });
+                RetroUi.RightEnd("Enter your choice [0-11] and press ENTER...");
+
+                RetroUi.Footer("Enter your choice [0-11]: ");
+                Console.SetCursorPosition(RetroUi.L.Bottom.x1 + 25, RetroUi.L.Bottom.y1 + 1);
+                var raw = (Console.ReadLine() ?? "").Trim();
+                if (!int.TryParse(raw, out var pick))
                 {
-                    Console.WriteLine("Please enter a number.");
-                    Console.Write("Press ENTER to continue..."); Console.ReadLine();
+                    RetroUi.ErrorMsg("Please enter a number.");
+                    System.Threading.Thread.Sleep(900);
+                    continue;
+                }
+                if (pick == 0) { RetroUi.Info("Exiting..."); System.Threading.Thread.Sleep(500); Console.Clear(); return; }
+
+                if (!actions.TryGetValue(pick, out var item))
+                {
+                    RetroUi.Warn("Wrong selection. Try again.");
+                    System.Threading.Thread.Sleep(900);
                     continue;
                 }
 
-                if (pick == 0)
-                {
-                    Console.WriteLine("Program ended.");
-                    return;
-                }
-
-                try
-                {
-                    if (actions.TryGetValue(pick, out var act))
-                    {
-                        act();
-                    }
-                    else
-                    {
-                        Console.WriteLine("Wrong selection. Try again.");
-                    }
-                }
+                try { item.Act(); }
                 catch (Exception ex)
                 {
-                    Console.Clear();
-                    Console.WriteLine($"Error: {ex.Message}");
+                    RetroUi.ErrorMsg(ex.Message);
+                    Console.ReadLine();
                 }
-
-                Console.WriteLine();
-                Console.Write("Press ENTER to continue...");
-                Console.ReadLine();
             }
         }
-    }
-    }
 
- 
+        private static void RunRightPane(string title, Action action)
+        {
+            RetroUi.RightBegin(title);
+
+            action.Invoke();
+
+            RetroUi.RightEnd();
+            RetroUi.RefreshFrameHeader("Online Library");
+        }
+    }
+}
+
+
+

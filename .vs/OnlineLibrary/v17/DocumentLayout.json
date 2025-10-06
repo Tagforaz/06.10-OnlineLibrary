@@ -3,12 +3,23 @@
   "WorkspaceRootPath": "C:\\Users\\Tagforaz\\Desktop\\Pb306\\OnlineLibrary\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{1CD1AAE0-8455-44D3-A7D4-E7C8EE0ABE89}|presentation\\OnlineLibrary.ConsoleApp\\OnlineLibrary.ConsoleApp.csproj|c:\\users\\tagforaz\\desktop\\pb306\\onlinelibrary\\presentation\\onlinelibrary.consoleapp\\helpers\\managementapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1CD1AAE0-8455-44D3-A7D4-E7C8EE0ABE89}|presentation\\OnlineLibrary.ConsoleApp\\OnlineLibrary.ConsoleApp.csproj|solutionrelative:presentation\\onlinelibrary.consoleapp\\helpers\\managementapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1CD1AAE0-8455-44D3-A7D4-E7C8EE0ABE89}|presentation\\OnlineLibrary.ConsoleApp\\OnlineLibrary.ConsoleApp.csproj|c:\\users\\tagforaz\\desktop\\pb306\\onlinelibrary\\presentation\\onlinelibrary.consoleapp\\helpers\\retroui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1CD1AAE0-8455-44D3-A7D4-E7C8EE0ABE89}|presentation\\OnlineLibrary.ConsoleApp\\OnlineLibrary.ConsoleApp.csproj|solutionrelative:presentation\\onlinelibrary.consoleapp\\helpers\\retroui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{1CD1AAE0-8455-44D3-A7D4-E7C8EE0ABE89}|presentation\\OnlineLibrary.ConsoleApp\\OnlineLibrary.ConsoleApp.csproj|c:\\users\\tagforaz\\desktop\\pb306\\onlinelibrary\\presentation\\onlinelibrary.consoleapp\\helpers\\managemetods.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1CD1AAE0-8455-44D3-A7D4-E7C8EE0ABE89}|presentation\\OnlineLibrary.ConsoleApp\\OnlineLibrary.ConsoleApp.csproj|solutionrelative:presentation\\onlinelibrary.consoleapp\\helpers\\managemetods.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1CD1AAE0-8455-44D3-A7D4-E7C8EE0ABE89}|presentation\\OnlineLibrary.ConsoleApp\\OnlineLibrary.ConsoleApp.csproj|c:\\users\\tagforaz\\desktop\\pb306\\onlinelibrary\\presentation\\onlinelibrary.consoleapp\\helpers\\managementapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1CD1AAE0-8455-44D3-A7D4-E7C8EE0ABE89}|presentation\\OnlineLibrary.ConsoleApp\\OnlineLibrary.ConsoleApp.csproj|solutionrelative:presentation\\onlinelibrary.consoleapp\\helpers\\managementapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1CD1AAE0-8455-44D3-A7D4-E7C8EE0ABE89}|presentation\\OnlineLibrary.ConsoleApp\\OnlineLibrary.ConsoleApp.csproj|c:\\users\\tagforaz\\desktop\\pb306\\onlinelibrary\\presentation\\onlinelibrary.consoleapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1CD1AAE0-8455-44D3-A7D4-E7C8EE0ABE89}|presentation\\OnlineLibrary.ConsoleApp\\OnlineLibrary.ConsoleApp.csproj|solutionrelative:presentation\\onlinelibrary.consoleapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Tagforaz\\AppData\\Local\\Temp\\165c8b56-3dc3-45e4-98ac-2d97d9cc8913_f_graph_h_FIRAT_KARAKUSOGLU_CODE_PROJECT_001_src.zip.913\\Article_src\\f_graph.cpp||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{41A92396-A599-44AD-900B-FD9759767CAD}|Infrastructure\\OnlineLibrary.Persistence\\OnlineLibrary.Persistence.csproj|c:\\users\\tagforaz\\desktop\\pb306\\onlinelibrary\\infrastructure\\onlinelibrary.persistence\\implementations\\repositories\\bookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -45,10 +56,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{41A92396-A599-44AD-900B-FD9759767CAD}|Infrastructure\\OnlineLibrary.Persistence\\OnlineLibrary.Persistence.csproj|c:\\users\\tagforaz\\desktop\\pb306\\onlinelibrary\\infrastructure\\onlinelibrary.persistence\\contexts\\migrations\\20251001113547_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{41A92396-A599-44AD-900B-FD9759767CAD}|Infrastructure\\OnlineLibrary.Persistence\\OnlineLibrary.Persistence.csproj|solutionrelative:infrastructure\\onlinelibrary.persistence\\contexts\\migrations\\20251001113547_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1CD1AAE0-8455-44D3-A7D4-E7C8EE0ABE89}|presentation\\OnlineLibrary.ConsoleApp\\OnlineLibrary.ConsoleApp.csproj|c:\\users\\tagforaz\\desktop\\pb306\\onlinelibrary\\presentation\\onlinelibrary.consoleapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1CD1AAE0-8455-44D3-A7D4-E7C8EE0ABE89}|presentation\\OnlineLibrary.ConsoleApp\\OnlineLibrary.ConsoleApp.csproj|solutionrelative:presentation\\onlinelibrary.consoleapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{41A92396-A599-44AD-900B-FD9759767CAD}|Infrastructure\\OnlineLibrary.Persistence\\OnlineLibrary.Persistence.csproj|c:\\users\\tagforaz\\desktop\\pb306\\onlinelibrary\\infrastructure\\onlinelibrary.persistence\\implementations\\services\\reserveditemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -118,7 +125,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 11,
           "Children": [
             {
               "$type": "Bookmark",
@@ -130,32 +137,45 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
+              "Title": "RetroUi.cs",
+              "DocumentMoniker": "C:\\Users\\Tagforaz\\Desktop\\Pb306\\OnlineLibrary\\presentation\\OnlineLibrary.ConsoleApp\\Helpers\\RetroUi.cs",
+              "RelativeDocumentMoniker": "presentation\\OnlineLibrary.ConsoleApp\\Helpers\\RetroUi.cs",
+              "ToolTip": "C:\\Users\\Tagforaz\\Desktop\\Pb306\\OnlineLibrary\\presentation\\OnlineLibrary.ConsoleApp\\Helpers\\RetroUi.cs",
+              "RelativeToolTip": "presentation\\OnlineLibrary.ConsoleApp\\Helpers\\RetroUi.cs",
+              "ViewState": "AgIAAOYAAAAAAAAAAAAIwPAAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T08:07:36.421Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "f_graph.cpp",
+              "DocumentMoniker": "C:\\Users\\Tagforaz\\AppData\\Local\\Temp\\165c8b56-3dc3-45e4-98ac-2d97d9cc8913_f_graph_h_FIRAT_KARAKUSOGLU_CODE_PROJECT_001_src.zip.913\\Article_src\\f_graph.cpp",
+              "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Local\\Temp\\165c8b56-3dc3-45e4-98ac-2d97d9cc8913_f_graph_h_FIRAT_KARAKUSOGLU_CODE_PROJECT_001_src.zip.913\\Article_src\\f_graph.cpp",
+              "ToolTip": "C:\\Users\\Tagforaz\\AppData\\Local\\Temp\\165c8b56-3dc3-45e4-98ac-2d97d9cc8913_f_graph_h_FIRAT_KARAKUSOGLU_CODE_PROJECT_001_src.zip.913\\Article_src\\f_graph.cpp [Read Only]",
+              "RelativeToolTip": "..\\..\\..\\AppData\\Local\\Temp\\165c8b56-3dc3-45e4-98ac-2d97d9cc8913_f_graph_h_FIRAT_KARAKUSOGLU_CODE_PROJECT_001_src.zip.913\\Article_src\\f_graph.cpp [Read Only]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-10-06T07:58:54.859Z",
+              "EditorCaption": " [Read Only]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "ManageMetods.cs",
               "DocumentMoniker": "C:\\Users\\Tagforaz\\Desktop\\Pb306\\OnlineLibrary\\presentation\\OnlineLibrary.ConsoleApp\\Helpers\\ManageMetods.cs",
               "RelativeDocumentMoniker": "presentation\\OnlineLibrary.ConsoleApp\\Helpers\\ManageMetods.cs",
               "ToolTip": "C:\\Users\\Tagforaz\\Desktop\\Pb306\\OnlineLibrary\\presentation\\OnlineLibrary.ConsoleApp\\Helpers\\ManageMetods.cs",
               "RelativeToolTip": "presentation\\OnlineLibrary.ConsoleApp\\Helpers\\ManageMetods.cs",
-              "ViewState": "AgIAALsCAAAAAAAAAAAswOUCAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAJQCAAAAAAAAAAA7wJ8CAABUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-03T17:18:39.855Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "AppDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\Tagforaz\\Desktop\\Pb306\\OnlineLibrary\\Infrastructure\\OnlineLibrary.Persistence\\Contexts\\AppDbContext.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\OnlineLibrary.Persistence\\Contexts\\AppDbContext.cs",
-              "ToolTip": "C:\\Users\\Tagforaz\\Desktop\\Pb306\\OnlineLibrary\\Infrastructure\\OnlineLibrary.Persistence\\Contexts\\AppDbContext.cs",
-              "RelativeToolTip": "Infrastructure\\OnlineLibrary.Persistence\\Contexts\\AppDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-01T10:37:57.689Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "AuthorRepository.cs",
               "DocumentMoniker": "C:\\Users\\Tagforaz\\Desktop\\Pb306\\OnlineLibrary\\Infrastructure\\OnlineLibrary.Persistence\\Implementations\\Repositories\\AuthorRepository.cs",
               "RelativeDocumentMoniker": "Infrastructure\\OnlineLibrary.Persistence\\Implementations\\Repositories\\AuthorRepository.cs",
@@ -167,7 +187,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "AuthorService.cs",
               "DocumentMoniker": "C:\\Users\\Tagforaz\\Desktop\\Pb306\\OnlineLibrary\\Infrastructure\\OnlineLibrary.Persistence\\Implementations\\Services\\AuthorService.cs",
               "RelativeDocumentMoniker": "Infrastructure\\OnlineLibrary.Persistence\\Implementations\\Services\\AuthorService.cs",
@@ -179,7 +199,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "BookService.cs",
               "DocumentMoniker": "C:\\Users\\Tagforaz\\Desktop\\Pb306\\OnlineLibrary\\Infrastructure\\OnlineLibrary.Persistence\\Implementations\\Services\\BookService.cs",
               "RelativeDocumentMoniker": "Infrastructure\\OnlineLibrary.Persistence\\Implementations\\Services\\BookService.cs",
@@ -191,7 +211,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "OnlineLibrary.Persistence.csproj",
               "DocumentMoniker": "C:\\Users\\Tagforaz\\Desktop\\Pb306\\OnlineLibrary\\Infrastructure\\OnlineLibrary.Persistence\\OnlineLibrary.Persistence.csproj",
               "RelativeDocumentMoniker": "Infrastructure\\OnlineLibrary.Persistence\\OnlineLibrary.Persistence.csproj",
@@ -199,12 +219,11 @@
               "RelativeToolTip": "Infrastructure\\OnlineLibrary.Persistence\\OnlineLibrary.Persistence.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-10-01T10:36:57.466Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-01T10:36:57.466Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "BookRepository.cs",
               "DocumentMoniker": "C:\\Users\\Tagforaz\\Desktop\\Pb306\\OnlineLibrary\\Infrastructure\\OnlineLibrary.Persistence\\Implementations\\Repositories\\BookRepository.cs",
               "RelativeDocumentMoniker": "Infrastructure\\OnlineLibrary.Persistence\\Implementations\\Repositories\\BookRepository.cs",
@@ -212,21 +231,45 @@
               "RelativeToolTip": "Infrastructure\\OnlineLibrary.Persistence\\Implementations\\Repositories\\BookRepository.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAiwDEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-01T11:08:52.451Z",
+              "WhenOpened": "2025-10-01T11:08:52.451Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Tagforaz\\Desktop\\Pb306\\OnlineLibrary\\presentation\\OnlineLibrary.ConsoleApp\\Program.cs",
+              "RelativeDocumentMoniker": "presentation\\OnlineLibrary.ConsoleApp\\Program.cs",
+              "ToolTip": "C:\\Users\\Tagforaz\\Desktop\\Pb306\\OnlineLibrary\\presentation\\OnlineLibrary.ConsoleApp\\Program.cs",
+              "RelativeToolTip": "presentation\\OnlineLibrary.ConsoleApp\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-30T16:12:32.844Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "ManagementApplication.cs",
               "DocumentMoniker": "C:\\Users\\Tagforaz\\Desktop\\Pb306\\OnlineLibrary\\presentation\\OnlineLibrary.ConsoleApp\\Helpers\\ManagementApplication.cs",
               "RelativeDocumentMoniker": "presentation\\OnlineLibrary.ConsoleApp\\Helpers\\ManagementApplication.cs",
               "ToolTip": "C:\\Users\\Tagforaz\\Desktop\\Pb306\\OnlineLibrary\\presentation\\OnlineLibrary.ConsoleApp\\Helpers\\ManagementApplication.cs",
               "RelativeToolTip": "presentation\\OnlineLibrary.ConsoleApp\\Helpers\\ManagementApplication.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAqwDgAAAArAAAAAAAAAA==",
+              "ViewState": "AgIAADsAAAAAAAAAAAAkwGgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-01T15:36:26.879Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Tagforaz\\Desktop\\Pb306\\OnlineLibrary\\Infrastructure\\OnlineLibrary.Persistence\\Contexts\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\OnlineLibrary.Persistence\\Contexts\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\Tagforaz\\Desktop\\Pb306\\OnlineLibrary\\Infrastructure\\OnlineLibrary.Persistence\\Contexts\\AppDbContext.cs",
+              "RelativeToolTip": "Infrastructure\\OnlineLibrary.Persistence\\Contexts\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-01T10:37:57.689Z"
             },
             {
               "$type": "Bookmark",
@@ -234,7 +277,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "20251002142542_ServicesCreated.cs",
               "DocumentMoniker": "C:\\Users\\Tagforaz\\Desktop\\Pb306\\OnlineLibrary\\Infrastructure\\OnlineLibrary.Persistence\\Contexts\\Migrations\\20251002142542_ServicesCreated.cs",
               "RelativeDocumentMoniker": "Infrastructure\\OnlineLibrary.Persistence\\Contexts\\Migrations\\20251002142542_ServicesCreated.cs",
@@ -246,7 +289,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 13,
               "Title": "20251001113547_Initial.cs",
               "DocumentMoniker": "C:\\Users\\Tagforaz\\Desktop\\Pb306\\OnlineLibrary\\Infrastructure\\OnlineLibrary.Persistence\\Contexts\\Migrations\\20251001113547_Initial.cs",
               "RelativeDocumentMoniker": "Infrastructure\\OnlineLibrary.Persistence\\Contexts\\Migrations\\20251001113547_Initial.cs",
@@ -258,7 +301,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "ReservedItemRepository.cs",
               "DocumentMoniker": "C:\\Users\\Tagforaz\\Desktop\\Pb306\\OnlineLibrary\\Infrastructure\\OnlineLibrary.Persistence\\Implementations\\Repositories\\ReservedItemRepository.cs",
               "RelativeDocumentMoniker": "Infrastructure\\OnlineLibrary.Persistence\\Implementations\\Repositories\\ReservedItemRepository.cs",
@@ -270,19 +313,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Tagforaz\\Desktop\\Pb306\\OnlineLibrary\\presentation\\OnlineLibrary.ConsoleApp\\Program.cs",
-              "RelativeDocumentMoniker": "presentation\\OnlineLibrary.ConsoleApp\\Program.cs",
-              "ToolTip": "C:\\Users\\Tagforaz\\Desktop\\Pb306\\OnlineLibrary\\presentation\\OnlineLibrary.ConsoleApp\\Program.cs",
-              "RelativeToolTip": "presentation\\OnlineLibrary.ConsoleApp\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-30T16:12:32.844Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "ReservedItemService.cs",
               "DocumentMoniker": "C:\\Users\\Tagforaz\\Desktop\\Pb306\\OnlineLibrary\\Infrastructure\\OnlineLibrary.Persistence\\Implementations\\Services\\ReservedItemService.cs",
               "RelativeDocumentMoniker": "Infrastructure\\OnlineLibrary.Persistence\\Implementations\\Services\\ReservedItemService.cs",
@@ -294,7 +325,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "IAuthorService.cs",
               "DocumentMoniker": "C:\\Users\\Tagforaz\\Desktop\\Pb306\\OnlineLibrary\\Core\\OnlineLibrary.Application\\Interfaces\\Services\\IAuthorService.cs",
               "RelativeDocumentMoniker": "Core\\OnlineLibrary.Application\\Interfaces\\Services\\IAuthorService.cs",
@@ -306,7 +337,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "IAuthorRepository.cs",
               "DocumentMoniker": "C:\\Users\\Tagforaz\\Desktop\\Pb306\\OnlineLibrary\\Core\\OnlineLibrary.Application\\Interfaces\\Repositories\\IAuthorRepository.cs",
               "RelativeDocumentMoniker": "Core\\OnlineLibrary.Application\\Interfaces\\Repositories\\IAuthorRepository.cs",
@@ -318,7 +349,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "IBookRepository.cs",
               "DocumentMoniker": "C:\\Users\\Tagforaz\\Desktop\\Pb306\\OnlineLibrary\\Core\\OnlineLibrary.Application\\Interfaces\\Repositories\\IBookRepository.cs",
               "RelativeDocumentMoniker": "Core\\OnlineLibrary.Application\\Interfaces\\Repositories\\IBookRepository.cs",
@@ -330,7 +361,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "IBookService.cs",
               "DocumentMoniker": "C:\\Users\\Tagforaz\\Desktop\\Pb306\\OnlineLibrary\\Core\\OnlineLibrary.Application\\Interfaces\\Services\\IBookService.cs",
               "RelativeDocumentMoniker": "Core\\OnlineLibrary.Application\\Interfaces\\Services\\IBookService.cs",
@@ -342,7 +373,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 19,
               "Title": "IReservedItemService.cs",
               "DocumentMoniker": "C:\\Users\\Tagforaz\\Desktop\\Pb306\\OnlineLibrary\\Core\\OnlineLibrary.Application\\Interfaces\\Services\\IReservedItemService.cs",
               "RelativeDocumentMoniker": "Core\\OnlineLibrary.Application\\Interfaces\\Services\\IReservedItemService.cs",
@@ -354,7 +385,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 20,
               "Title": "ReservedItem.cs",
               "DocumentMoniker": "C:\\Users\\Tagforaz\\Desktop\\Pb306\\OnlineLibrary\\Core\\OnlineLibrary.Domain\\Entities\\ReservedItem.cs",
               "RelativeDocumentMoniker": "Core\\OnlineLibrary.Domain\\Entities\\ReservedItem.cs",
@@ -366,7 +397,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 22,
               "Title": "Author.cs",
               "DocumentMoniker": "C:\\Users\\Tagforaz\\Desktop\\Pb306\\OnlineLibrary\\Core\\OnlineLibrary.Domain\\Entities\\Author.cs",
               "RelativeDocumentMoniker": "Core\\OnlineLibrary.Domain\\Entities\\Author.cs",
@@ -378,7 +409,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 23,
               "Title": "BaseEntity.cs",
               "DocumentMoniker": "C:\\Users\\Tagforaz\\Desktop\\Pb306\\OnlineLibrary\\Core\\OnlineLibrary.Domain\\Entities\\Common\\BaseEntity.cs",
               "RelativeDocumentMoniker": "Core\\OnlineLibrary.Domain\\Entities\\Common\\BaseEntity.cs",
@@ -390,7 +421,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 21,
               "Title": "Book.cs",
               "DocumentMoniker": "C:\\Users\\Tagforaz\\Desktop\\Pb306\\OnlineLibrary\\Core\\OnlineLibrary.Domain\\Entities\\Book.cs",
               "RelativeDocumentMoniker": "Core\\OnlineLibrary.Domain\\Entities\\Book.cs",
@@ -402,7 +433,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 24,
               "Title": "IReservedItemRepository.cs",
               "DocumentMoniker": "C:\\Users\\Tagforaz\\Desktop\\Pb306\\OnlineLibrary\\Core\\OnlineLibrary.Application\\Interfaces\\Repositories\\IReservedItemRepository.cs",
               "RelativeDocumentMoniker": "Core\\OnlineLibrary.Application\\Interfaces\\Repositories\\IReservedItemRepository.cs",
@@ -414,7 +445,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 25,
               "Title": "Status.cs",
               "DocumentMoniker": "C:\\Users\\Tagforaz\\Desktop\\Pb306\\OnlineLibrary\\Core\\OnlineLibrary.Domain\\Enums\\Status.cs",
               "RelativeDocumentMoniker": "Core\\OnlineLibrary.Domain\\Enums\\Status.cs",
@@ -426,7 +457,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 26,
               "Title": "Gender.cs",
               "DocumentMoniker": "C:\\Users\\Tagforaz\\Desktop\\Pb306\\OnlineLibrary\\Core\\OnlineLibrary.Domain\\Enums\\Gender.cs",
               "RelativeDocumentMoniker": "Core\\OnlineLibrary.Domain\\Enums\\Gender.cs",
@@ -438,7 +469,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 27,
               "Title": "OnlineLibrary.ConsoleApp.csproj",
               "DocumentMoniker": "C:\\Users\\Tagforaz\\Desktop\\Pb306\\OnlineLibrary\\presentation\\OnlineLibrary.ConsoleApp\\OnlineLibrary.ConsoleApp.csproj",
               "RelativeDocumentMoniker": "presentation\\OnlineLibrary.ConsoleApp\\OnlineLibrary.ConsoleApp.csproj",
@@ -450,7 +481,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 28,
               "Title": "OnlineLibrary.Domain.csproj",
               "DocumentMoniker": "C:\\Users\\Tagforaz\\Desktop\\Pb306\\OnlineLibrary\\Core\\OnlineLibrary.Domain\\OnlineLibrary.Domain.csproj",
               "RelativeDocumentMoniker": "Core\\OnlineLibrary.Domain\\OnlineLibrary.Domain.csproj",
